@@ -55,8 +55,6 @@ fetch(
       const img = document.createElement("img");
       img.alt = character.name;
       img.loading = "lazy";
-      img.width = 404;
-      img.height = 560;
       img.src = images[character.name.toLowerCase()];
       img.style.color = "transparent";
       img.className = "mr-.5 h-8 rounded-bl-lg";
