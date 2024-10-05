@@ -68,7 +68,7 @@ fetch(
       (fourStars - Math.ceil(fourStars * 0.535)) * 0.35
     );
     let fourStarFiftyLose = fourStarFiftyAttempt - fourStarFiftyWin;
-    let fourStarWeapon = Math.ceil(fourStars * 0.35);
+    let fourStarWeapon = Math.ceil(fourStars * 0.15);
     let fourStarCharacter = fourStars - fourStarWeapon;
 
     // Update the pull stats
@@ -86,85 +86,70 @@ fetch(
     var avgFiveStarPity = accumulatedPullNo / characters.length;
     var avgFourStarPity = totalPulls / fourStars;
     updateCell("5✦ Pulls", avgFiveStarPity.toFixed(2), 0, 3);
-    updateCell(
-      "5✦ Pulls",
-      ((fiveStars / totalPulls) * 100).toFixed(2) + "%",
-      0,
-      2
-    );
     updateCell("4✦ Pulls", avgFourStarPity.toFixed(2), 0, 3);
-    updateCell(
-      "4✦ Pulls",
-      ((fourStars / totalPulls) * 100 > 10
-        ? 10.0
-        : (fourStars / totalPulls) * 10
-      ).toFixed(2) + "%",
-      0,
-      2
-    );
     updateCell(
       "└ Character",
       ((fourStarCharacter / fourStars) * 10).toFixed(2),
       0,
       3
     );
+    updateCell("└ Weapon", 10, 0, 3);
     updateCell(
-      "└ Character",
-      ((fourStarCharacter / totalPulls) * 1000).toFixed(2) + "%",
+      "└ Wins",
+      ((fiveStarFiftyWin / fiveStars) * 100).toFixed(2) + "%",
       0,
       2
     );
-    updateCell("└ Weapon", 10, 0, 3);
     updateCell(
-      "└ Weapon",
-      ((fourStarWeapon / totalPulls) * 1000).toFixed(2) + "%",
-      0,
+      "└ Wins",
+      ((fourStarFiftyWin / fourStars) * 100).toFixed(2) + "%",
+      1,
       2
     );
 
     //update percentage of pull stats
 
-    //// Initialize total pulls
-    // characters.forEach((character) => {
-    //   // Create character div
-    //   const characterDiv = document.createElement("div");
-    //   characterDiv.className =
-    //     "flex items-center gap-x-2 rounded-lg px-1 pl-0 text-lg transition-transform hover:scale-110 bg-neutral-100/20";
+    // Initialize total pulls
+    characters.forEach((character) => {
+      // Create character div
+      const characterDiv = document.createElement("div");
+      characterDiv.className =
+        "flex items-center gap-x-2 rounded-lg px-1 pl-0 text-lg transition-transform hover:scale-110 bg-neutral-100/20";
 
-    //   // Create image container and image
-    //   const img = document.createElement("img");
-    //   img.alt = character.name;
-    //   img.loading = "lazy";
-    //   img.src = images[character.name.toLowerCase()];
-    //   img.style.color = "transparent";
+      // Create image container and image
+      const img = document.createElement("img");
+      img.alt = character.name;
+      img.loading = "lazy";
+      img.src = images[character.name.toLowerCase()];
+      img.style.color = "transparent";
 
-    //   img.className = "mr-.5 h-8 rounded-bl-lg";
+      img.className = "mr-.5 h-8 rounded-bl-lg";
 
-    //   characterDiv.appendChild(img);
+      characterDiv.appendChild(img);
 
-    //   // Create character name and value
-    //   const nameSpan = document.createElement("span");
-    //   nameSpan.textContent = character.name;
+      // Create character name and value
+      const nameSpan = document.createElement("span");
+      nameSpan.textContent = character.name;
 
-    //   const valueSpan = document.createElement("span");
-    //   valueSpan.className = "ml-1 font-bold";
+      const valueSpan = document.createElement("span");
+      valueSpan.className = "ml-1 font-bold";
 
-    //   if (character.value > 49) {
-    //     valueSpan.className += " text-r4";
-    //   } else {
-    //     valueSpan.className += " text-success";
-    //   }
+      if (character.value > 49) {
+        valueSpan.className += " text-r4";
+      } else {
+        valueSpan.className += " text-success";
+      }
 
-    //   if (character.win) {
-    //     characterDiv.className += " bg-r5/45";
-    //   }
+      if (character.win) {
+        characterDiv.className += " bg-r5/45";
+      }
 
-    //   valueSpan.textContent = character.value;
+      valueSpan.textContent = character.value;
 
-    //   characterDiv.appendChild(nameSpan);
-    //   characterDiv.appendChild(valueSpan);
+      characterDiv.appendChild(nameSpan);
+      characterDiv.appendChild(valueSpan);
 
-    //   container.appendChild(characterDiv);
-    // });
+      container.appendChild(characterDiv);
+    });
   })
   .catch((error) => console.error("Error fetching data:", error));

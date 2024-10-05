@@ -96,13 +96,13 @@ fetch(
     updateCell("└ Weapon", 10, 0, 3);
     updateCell(
       "└ Wins",
-      ((fiveStarFiftyWin / fiveStars) * 100).toFixed(2),
+      ((fiveStarFiftyWin / fiveStars) * 100).toFixed(2) + "%",
       0,
       2
     );
     updateCell(
       "└ Wins",
-      ((fourStarFiftyWin / fourStars) * 100).toFixed(2),
+      ((fourStarFiftyWin / fourStars) * 100).toFixed(2) + "%",
       1,
       2
     );
