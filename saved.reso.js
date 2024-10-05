@@ -68,7 +68,7 @@ fetch(
       (fourStars - Math.ceil(fourStars * 0.535)) * 0.35
     );
     let fourStarFiftyLose = fourStarFiftyAttempt - fourStarFiftyWin;
-    let fourStarWeapon = Math.ceil(fourStars * 0.35);
+    let fourStarWeapon = Math.ceil(fourStars * 0.15);
     let fourStarCharacter = fourStars - fourStarWeapon;
 
     // Update the pull stats
@@ -86,39 +86,24 @@ fetch(
     var avgFiveStarPity = accumulatedPullNo / characters.length;
     var avgFourStarPity = totalPulls / fourStars;
     updateCell("5✦ Pulls", avgFiveStarPity.toFixed(2), 0, 3);
-    updateCell(
-      "5✦ Pulls",
-      ((fiveStars / totalPulls) * 100).toFixed(2) + "%",
-      0,
-      2
-    );
     updateCell("4✦ Pulls", avgFourStarPity.toFixed(2), 0, 3);
-    updateCell(
-      "4✦ Pulls",
-      ((fourStars / totalPulls) * 100 > 10
-        ? 10.0
-        : (fourStars / totalPulls) * 10
-      ).toFixed(2) + "%",
-      0,
-      2
-    );
     updateCell(
       "└ Character",
       ((fourStarCharacter / fourStars) * 10).toFixed(2),
       0,
       3
     );
+    updateCell("└ Weapon", 10, 0, 3);
     updateCell(
-      "└ Character",
-      ((fourStarCharacter / totalPulls) * 1000).toFixed(2) + "%",
+      "└ Wins",
+      ((fiveStarFiftyWin / fiveStars) * 100).toFixed(2),
       0,
       2
     );
-    updateCell("└ Weapon", 10, 0, 3);
     updateCell(
-      "└ Weapon",
-      ((fourStarWeapon / totalPulls) * 1000).toFixed(2) + "%",
-      0,
+      "└ Wins",
+      ((fourStarFiftyWin / fourStars) * 100).toFixed(2),
+      1,
       2
     );
 
