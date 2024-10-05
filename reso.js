@@ -50,6 +50,7 @@ fetch(
           fiveStarFiftyWin++;
           guaranteed = false;
         } else {
+          characters[i].lose = true;
           fiveStarFiftyLose++;
           guaranteed = true;
         }
@@ -63,9 +64,9 @@ fetch(
     var fourStars = Math.ceil((totalPulls + currentPity) / 10 + 13);
     var fiveStars = characters.length;
 
-    let fourStarFiftyAttempt = fourStars - Math.ceil(fourStars * 0.535);
+    let fourStarFiftyAttempt = fourStars - Math.ceil(fourStars * 0.5);
     let fourStarFiftyWin = Math.ceil(
-      (fourStars - Math.ceil(fourStars * 0.535)) * 0.35
+      (fourStars - Math.ceil(fourStars * 0.535)) * 0.81
     );
     let fourStarFiftyLose = fourStarFiftyAttempt - fourStarFiftyWin;
     let fourStarWeapon = Math.ceil(fourStars * 0.15);
@@ -79,8 +80,8 @@ fetch(
     updateCell("└ Weapon", fourStarWeapon);
     updateCell("50:50 Attempts", fiveStarFiftyAttempt);
     updateCell("└ Wins", fiveStarFiftyWin);
-    updateCell("50:50 Attempts", fourStarFiftyAttempt, 1); // Update the second 50:50 Attempts
-    updateCell("└ Wins", fourStarFiftyWin, 1); // Update the second └ Wins
+    updateCell("50:50 Attempts", fourStarFiftyAttempt, 1);
+    updateCell("└ Wins", fourStarFiftyWin, 1);
 
     //update average pity stats
     var avgFiveStarPity = accumulatedPullNo / characters.length;
@@ -96,19 +97,16 @@ fetch(
     updateCell("└ Weapon", 10, 0, 3);
     updateCell(
       "└ Wins",
-      ((fiveStarFiftyWin / fiveStars) * 100).toFixed(2) + "%",
+      ((fiveStarFiftyWin / fiveStarFiftyAttempt) * 100).toFixed(2) + "%",
       0,
       2
     );
     updateCell(
       "└ Wins",
-      ((fourStarFiftyWin / fourStars) * 100).toFixed(2) + "%",
+      ((fourStarFiftyWin / fourStarFiftyAttempt) * 100).toFixed(2) + "%",
       1,
       2
     );
-
-    //update percentage of pull stats
-
     // Initialize total pulls
     characters.forEach((character) => {
       // Create character div
@@ -150,6 +148,55 @@ fetch(
       characterDiv.appendChild(valueSpan);
 
       container.appendChild(characterDiv);
+    });
+
+    const tablesBody = document.querySelectorAll("tbody");
+    const tableBody = tablesBody[1];
+    tableBody.innerHTML = "";
+
+    // history list
+    characters.forEach((char) => {
+      const row = document.createElement("tr");
+      row.className =
+        "border-neutral-800 border-t bg-fixed font-semibold bg-gradient-to-r from-transparent via-66% via-r5/40";
+
+      row.innerHTML = `
+      <td class="pl-2">${char.pullno}</td>
+        <td class="">
+          <div class="flex w-full items-end justify-center" bis_skin_checked="1">
+            <img alt="${
+              char.name
+            } Portrait" class="h-8 min-h-8 w-8 min-w-8" src="${
+        images[char.name.toLowerCase()]
+      }"/>
+          </div>
+        </td>
+        <td class="text-r4">${char.name}</td>
+        <td>
+
+          <span title="${
+            char.win ? "Won 50:50" : char.lose ? "Lost 50:50" : "Guaranteed"
+          }" class="justify-left flex h-full w-full flex-row items-center leading-none">
+          <span class="opacity-100">${char.value}</span>
+          ${
+            char.win
+              ? `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-success hover:text-success/60">
+              <path d="M11.1464 6.85355C11.3417 7.04882 11.6583 7.04882 11.8536 6.85355C12.0488 6.65829 12.0488 6.34171 11.8536 6.14645L7.85355 2.14645C7.65829 1.95118 7.34171 1.95118 7.14645 2.14645L3.14645 6.14645C2.95118 6.34171 2.95118 6.65829 3.14645 6.85355C3.34171 7.04882 3.65829 7.04882 3.85355 6.85355L7.5 3.20711L11.1464 6.85355ZM11.1464 12.8536C11.3417 13.0488 11.6583 13.0488 11.8536 12.8536C12.0488 12.6583 12.0488 12.3417 11.8536 12.1464L7.85355 8.14645C7.65829 7.95118 7.34171 7.95118 7.14645 8.14645L3.14645 12.1464C2.95118 12.3417 2.95118 12.6583 3.14645 12.8536C3.34171 13.0488 3.65829 13.0488 3.85355 12.8536L7.5 9.20711L11.1464 12.8536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>`
+              : char.lose
+              ? `<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-[2px] h-4 w-4 text-r4 hover:text-r4/60"><path d="M7.49991 0.877075C3.84222 0.877075 0.877075 3.84222 0.877075 7.49991C0.877075 11.1576 3.84222 14.1227 7.49991 14.1227C11.1576 14.1227 14.1227 11.1576 14.1227 7.49991C14.1227 3.84222 11.1576 0.877075 7.49991 0.877075ZM3.85768 3.15057C4.84311 2.32448 6.11342 1.82708 7.49991 1.82708C10.6329 1.82708 13.1727 4.36689 13.1727 7.49991C13.1727 8.88638 12.6753 10.1567 11.8492 11.1421L3.85768 3.15057ZM3.15057 3.85768C2.32448 4.84311 1.82708 6.11342 1.82708 7.49991C1.82708 10.6329 4.36689 13.1727 7.49991 13.1727C8.88638 13.1727 10.1567 12.6753 11.1421 11.8492L3.15057 3.85768Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>`
+              : ``
+          }
+          </span>
+        </td>
+        <td>
+          <a href="https://astrite.gg/featured-resonator" class="flex w-full items-center justify-center" bis_skin_checked="1"
+            ><img alt="Banner Background" class="h-8 max-h-8 min-h-8 min-w-24" src="./gg.gg_files/_image(19)"
+          /></a>
+        </td>
+        <td class="border-neutral-800 border-t p-1">${char.date}</td>`;
+
+      tableBody.appendChild(row);
     });
   })
   .catch((error) => console.error("Error fetching data:", error));

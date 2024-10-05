@@ -12,226 +12,270 @@
     "zhezhi": "/_image?href=%2F_astro%2Fzhezhi.IQy3-9pI.png&f=webp",
     "jiyan": "/_image?href=%2F_astro%2Fjiyan.BOWuSkC1.png&f=webp"
   },
+  "banners": {
+    "shorekeeper": "/_image?href=%2F_astro%2Ftill-the-sea-turns-clear.f3m3gtir.jpg&f=webp",
+    "changli": "/_image?href=%2F_astro%2Fvermillions-ploy.gATx8z_k.jpg&f=webp",
+    "jinhsi": "/_image?href=%2F_astro%2Fthawborn-renewal.BBPg8qFh.jpg&f=webp",
+    "yinlin": "/_image?href=%2F_astro%2Fwhen-thunder-pours.CPqkUaIv.jpg&f=webp"
+  },
   "characters": [
     {
       "name": "Shorekeeper",
       "value": 68,
-      "date": "2024-08-15 12:42:23"
+      "date": "2024-08-15 12:42:23",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 1,
-      "date": "2024-08-15 12:41:45"
+      "date": "2024-08-15 12:41:45",
+      "banner": "shorekeeper"
     },
     {
       "name": "Verina",
       "value": 36,
-      "date": "2024-08-15 12:41:44"
+      "date": "2024-08-15 12:41:44",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 72,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Jianxin",
       "value": 23,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 29,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Calcharo",
       "value": 68,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 73,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 6,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Lingyang",
       "value": 43,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Shorekeeper",
       "value": 69,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-08-15 12:41:17",
+      "banner": "shorekeeper"
     },
     {
       "name": "Changli",
       "value": 44,
-      "date": "2024-07-22 09:39:54"
+      "date": "2024-07-22 09:39:54",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 16,
-      "date": "2024-07-22 09:38:54"
-    },
-    {
-      "name": "Jianxin",
-      "value": 54,
-      "date": "2024-07-22 09:38:35"
+      "date": "2024-07-22 09:38:54",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 67,
-      "date": "2024-07-22 09:37:59"
+      "date": "2024-07-22 09:37:59",
+      "banner": "changli"
     },
     {
       "name": "Verina",
       "value": 28,
-      "date": "2024-07-22 09:37:06"
+      "date": "2024-07-22 09:37:06",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 73,
-      "date": "2024-07-22 09:36:41"
+      "date": "2024-07-22 09:36:41",
+      "banner": "changli"
     },
     {
       "name": "Encore",
       "value": 51,
-      "date": "2024-07-22 09:35:54"
+      "date": "2024-07-22 09:35:54",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 6,
-      "date": "2024-07-22 09:35:13"
+      "date": "2024-07-22 09:35:13",
+      "banner": "changli"
     },
     {
       "name": "Calcharo",
       "value": 71,
-      "date": "2024-07-22 09:35:02"
+      "date": "2024-07-22 09:35:02",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 63,
-      "date": "2024-07-22 09:33:16"
+      "date": "2024-07-22 09:33:16",
+      "banner": "changli"
     },
     {
       "name": "Changli",
       "value": 39,
-      "date": "2024-07-22 09:32:10"
+      "date": "2024-07-22 09:32:10",
+      "banner": "changli"
     },
     {
       "name": "Jinhsi",
       "value": 38,
-      "date": "2024-06-29 10:39:19"
+      "date": "2024-06-29 10:39:19",
+      "banner": "jinhsi"
     },
     {
       "name": "Verina",
       "value": 72,
-      "date": "2024-06-29 10:38:49"
+      "date": "2024-06-29 10:38:49",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 29,
-      "date": "2024-06-29 10:38:08"
+      "date": "2024-06-29 10:38:08",
+      "banner": "jinhsi"
     },
     {
       "name": "Calcharo",
       "value": 2,
-      "date": "2024-06-29 10:37:53"
+      "date": "2024-06-29 10:37:53",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 67,
-      "date": "2024-06-29 10:37:48"
+      "date": "2024-06-29 10:37:48",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 18,
-      "date": "2024-06-29 10:37:16"
+      "date": "2024-06-29 10:37:16",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 52,
-      "date": "2024-06-29 10:36:37"
+      "date": "2024-06-29 10:36:37",
+      "banner": "jinhsi"
     },
     {
       "name": "Verina",
       "value": 48,
-      "date": "2024-06-29 10:35:01"
+      "date": "2024-06-29 10:35:01",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 27,
-      "date": "2024-06-29 10:34:26"
+      "date": "2024-06-29 10:34:26",
+      "banner": "jinhsi"
     },
     {
       "name": "Jinhsi",
       "value": 30,
-      "date": "2024-06-29 10:33:51"
+      "date": "2024-06-29 10:33:51",
+      "banner": "jinhsi"
     },
     {
       "name": "Yinlin",
       "value": 67,
-      "date": "2024-06-15 12:50:22"
+      "date": "2024-06-15 12:50:22",
+      "banner": "yinlin"
     },
     {
       "name": "Lingyang",
       "value": 56,
-      "date": "2024-06-15 12:49:47"
+      "date": "2024-06-15 12:49:47",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 71,
-      "date": "2024-06-15 12:49:10"
+      "date": "2024-06-15 12:49:10",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 19,
-      "date": "2024-06-15 12:47:21"
+      "date": "2024-06-15 12:47:21",
+      "banner": "yinlin"
     },
     {
       "name": "Jianxin",
       "value": 44,
-      "date": "2024-06-15 12:47:07"
+      "date": "2024-06-15 12:47:07",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 68,
-      "date": "2024-06-15 12:46:33"
+      "date": "2024-06-15 12:46:33",
+      "banner": "yinlin"
     },
     {
       "name": "Calcharo",
       "value": 52,
-      "date": "2024-06-15 12:45:50"
+      "date": "2024-06-15 12:45:50",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 7,
-      "date": "2024-06-15 12:44:38"
+      "date": "2024-06-15 12:44:38",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 44,
-      "date": "2024-06-15 12:44:23"
+      "date": "2024-06-15 12:44:23",
+      "banner": "yinlin"
     },
     {
       "name": "Verina",
       "value": 20,
-      "date": "2024-06-15 12:43:04"
+      "date": "2024-06-15 12:43:04",
+      "banner": "yinlin"
     },
     {
       "name": "Yinlin",
       "value": 71,
-      "date": "2024-06-15 12:41:53"
+      "date": "2024-06-15 12:41:53",
+      "banner": "yinlin"
     },
     {
       "name": "Jianxin",
       "value": 10,
-      "date": "2024-06-15 12:41:17"
+      "date": "2024-06-15 12:41:17",
+      "banner": "yinlin"
     }
   ]
 }
