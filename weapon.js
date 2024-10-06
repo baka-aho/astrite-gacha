@@ -6,7 +6,7 @@ const updateCell = (label, newValue, index = 0, cell = 1) => {
     cells[index].parentNode.cells[cell].innerText = newValue;
   }
 };
-var currentPity = 7;
+var currentPity = 9;
 let totalPulls = 0;
 
 const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
@@ -25,11 +25,13 @@ fetch(
   .then((data) => {
     const weapons = data.weapons;
     const images = data.images;
+    console.log(images);
     const banners = data.banners;
 
     weapons.forEach((weapon) => {
       totalPulls += weapon.value;
     });
+    totalPulls += currentPity;
 
     //code to blah blah blah
     let accumulatedPullNo = 0;
@@ -38,19 +40,15 @@ fetch(
       weapons[i].pullno = accumulatedPullNo;
     }
 
-    var fourStars = Math.ceil((totalPulls + currentPity) / 10 + 65);
-    var fiveStars = weapons.length;
-
-    let fourStarFiftyAttempt = fourStars - Math.ceil(fourStars * 0.5);
-    let fourStarFiftyWin = Math.ceil(
-      (fourStars - Math.ceil(fourStars * 0.535)) * 0.66
+    var fourStars = Math.ceil(
+      (totalPulls + currentPity) / 10 + ((totalPulls + currentPity) / 10) * 0.2
     );
-    let fourStarFiftyLose = fourStarFiftyAttempt - fourStarFiftyWin;
-    let fourStarWeapon = Math.ceil(fourStars * 0.15);
-    let fourStarCharacter = fourStars - fourStarWeapon;
+    var fiveStars = weapons.length;
+    let fourStarCharacter = Math.ceil(fourStars * 0.15);
+    let fourStarWeapon = fourStars - fourStarCharacter;
 
     // Update the pull stats
-    updateCell("Total Pulls", totalPulls + currentPity);
+    updateCell("Total Pulls", totalPulls);
     updateCell("5✦ Pulls", fiveStars);
     updateCell("4✦ Pulls", fourStars);
     updateCell("└ Character", fourStarCharacter);
@@ -74,19 +72,19 @@ fetch(
       0,
       2
     );
-    updateCell(
-      "└ Character",
-      ((fourStarCharacter / fourStars) * 10 * 0.9).toFixed(2),
-      0,
-      3
-    );
+    updateCell("└ Character", 10, 0, 3);
     updateCell(
       "└ Character",
       ((fourStarCharacter / fourStars) * 100).toFixed(2) + "%",
       0,
       2
     );
-    updateCell("└ Weapon", 10, 0, 3);
+    updateCell(
+      "└ Weapon",
+      ((fourStarWeapon / fourStars) * 10 * 0.9).toFixed(2),
+      0,
+      3
+    );
     updateCell(
       "└ Weapon",
       ((fourStarWeapon / fourStars) * 100).toFixed(2) + "%",
@@ -105,7 +103,7 @@ fetch(
       const img = document.createElement("img");
       img.alt = weapon.name;
       img.loading = "lazy";
-      img.src = images[weapon.name.toLowerCase().replace(" ", "-")];
+      img.src = images[weapon.name.toLowerCase().replace(" ", "-").trim()];
       img.style.color = "transparent";
 
       img.className = "mr-.5 h-8 rounded-bl-lg";

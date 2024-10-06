@@ -30,6 +30,7 @@ fetch(
     characters.forEach((character) => {
       totalPulls += character.value;
     });
+    totalPulls += currentPity;
 
     //code to blah blah blah
     let accumulatedPullNo = 0;
@@ -74,7 +75,7 @@ fetch(
     let fourStarCharacter = fourStars - fourStarWeapon;
 
     // Update the pull stats
-    updateCell("Total Pulls", totalPulls + currentPity);
+    updateCell("Total Pulls", totalPulls);
     updateCell("5✦ Pulls", fiveStars);
     updateCell("4✦ Pulls", fourStars);
     updateCell("└ Character", fourStarCharacter);
