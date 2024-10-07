@@ -103,7 +103,7 @@ fetch(
       const img = document.createElement("img");
       img.alt = weapon.name;
       img.loading = "lazy";
-      img.src = images[weapon.name.toLowerCase().replace(" ", "-").trim()];
+      img.src = images[weapon.name.toLowerCase().trim().replaceAll(" ", "-")];
       img.style.color = "transparent";
 
       img.className = "mr-.5 h-8 rounded-bl-lg";
@@ -152,7 +152,7 @@ fetch(
               <img alt="${
                 weapon.name
               } Portrait" class="h-8 min-h-8 w-8 min-w-8" src="${
-        images[weapon.name.toLowerCase()]
+        images[weapon.name.toLowerCase().trim().replaceAll(" ", "-")]
       }"/>
             </div>
           </td>
@@ -175,7 +175,7 @@ fetch(
           <td>
             <a href="https://astrite.gg/featured-resonator" class="flex w-full items-center justify-center" bis_skin_checked="1"
               ><img alt="Banner Background" class="h-8 max-h-8 min-h-8 min-w-24" src="${
-                banners[weapon.banner]
+                banners[weapon.name.toLowerCase().trim().replaceAll(" ", "-")]
               }"
             /></a>
           </td>
