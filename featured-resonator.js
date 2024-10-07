@@ -6,7 +6,20 @@ const updateCell = (label, newValue, index = 0, cell = 1) => {
     cells[index].parentNode.cells[cell].innerText = newValue;
   }
 };
-var currentPity = 7;
+
+var currentPity = 0;
+fetch(chrome.runtime.getURL("./data.json"))
+  .then((response) => {
+    if (!response.ok) {
+    }
+    return response.json();
+  })
+  .then((json) => {
+    console.log(json);
+    currentPity = json["featured-reso-pity"];
+  })
+  .catch((error) => {});
+
 let totalPulls = 0;
 
 const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
