@@ -2,88 +2,115 @@
   "images": {
     "stellar-symphony": "/_image?href=%2F_astro%2FT_IconWeapon21050027_UI.0uS3WPhX.webp&f=webp",
     "blazing-brilliance": "/_image?href=%2F_astro%2Fblazing-brilliance.qgG6vnRo.webp&f=webp",
-    "age-of-harvest": "/_image?href=%2F_astro%2FT_IconWeapon21010026_UI.BW_8wx-f.png&f=webp"
+    "age-of-harvest": "/_image?href=%2F_astro%2FT_IconWeapon21010026_UI.BW_8wx-f.png&f=webp",
+    "stringmaster": "/_image?href=%2F_astro%2FT_IconWeapon21050016_UI.D4nYHz6u.png&f=webp"
   },
   "banners": {
     "stellar-symphony": "/_image?href=%2F_astro%2Fstellar-symphony.YiQUyYbG.jpg&f=webp",
     "blazing-brilliance": "/_image?href=%2F_astro%2Fblazing-brilliance.BpunBfl9.jpg&f=webp",
-    "age-of-harvest": "/_image?href=%2F_astro%2Fages-of-harvest.Cz9lshw7.jpg&f=webp"
+    "age-of-harvest": "/_image?href=%2F_astro%2Fages-of-harvest.Cz9lshw7.jpg&f=webp",
+    "stringmaster": "/_image?href=%2F_astro%2Fstringmaster.BmtfOZJj.jpg&f=webp"
   },
   "weapons": [
     {
       "name": "Stellar Symphony",
       "value": 12,
-      "date": "2024-08-15 12:48:06"
+      "date": "2024-08-15 12:44:58"
     },
     {
       "name": "Stellar Symphony",
       "value": 45,
-      "date": "2024-08-15 12:47:49"
+      "date": "2024-08-15 12:44:41"
     },
     {
       "name": "Stellar Symphony",
       "value": 29,
-      "date": "2024-08-15 12:47:22"
+      "date": "2024-08-15 12:44:02"
     },
     {
       "name": "Stellar Symphony",
       "value": 67,
-      "date": "2024-08-15 12:46:58"
+      "date": "2024-08-15 12:43:39"
     },
     {
       "name": "Stellar Symphony",
       "value": 33,
-      "date": "2024-08-15 12:46:17"
+      "date": "2024-08-15 12:42:42"
     },
     {
       "name": "Blazing Brilliance",
       "value": 68,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-07-22 09:42:31"
     },
     {
       "name": "Blazing Brilliance",
       "value": 39,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-07-22 09:41:58"
     },
     {
       "name": "Blazing Brilliance",
       "value": 21,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-07-22 09:41:37"
     },
     {
       "name": "Blazing Brilliance",
       "value": 39,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-07-22 09:40:53"
     },
     {
       "name": "Blazing Brilliance",
       "value": 72,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-07-22 09:40:21"
     },
     {
       "name": "Age of Harvest",
       "value": 66,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-06-29 10:41:48"
     },
     {
       "name": "Age of Harvest",
       "value": 37,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-06-29 10:41:09"
     },
     {
       "name": "Age of Harvest",
       "value": 1,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-06-29 10:40:41"
     },
     {
       "name": "Age of Harvest",
       "value": 28,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-06-29 10:40:39"
     },
     {
       "name": "Age of Harvest",
       "value": 42,
-      "date": "2024-08-15 12:41:17"
+      "date": "2024-06-29 10:40:17"
+    },
+    {
+      "name": "Stringmaster",
+      "value": 31,
+      "date": "2024-06-15 12:52:47"
+    },
+    {
+      "name": "Stringmaster",
+      "value": 73,
+      "date": "2024-06-15 12:52:14"
+    },
+    {
+      "name": "Stringmaster",
+      "value": 68,
+      "date": "2024-06-15 12:51:42"
+    },
+    {
+      "name": "Stringmaster",
+      "value": 44,
+      "date": "2024-06-15 12:51:27"
+    },
+    {
+      "name": "Stringmaster",
+      "value": 3,
+      "date": "2024-06-15 12:50:53"
     }
   ]
 }
