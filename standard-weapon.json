@@ -1,0 +1,21 @@
+{
+  "images": {
+    "eustrous-razor": "/_image?href=%2F_astro%2FT_IconWeapon21010015_UI.eQZ-ZQLJ.png&f=webp",
+    "emerald-of-genesis": "/_image?href=%2F_astro%2FT_IconWeapon21020015_UI.CF_FmeUX.png&f=webp"
+  },
+  "banner": "/_image?href=%2F_astro%2Ftill-the-sea-turns-clear.f3m3gtir.jpg&f=webp",
+  "characters": [
+    {
+      "name": "Lustrous Razor",
+      "value": 34,
+      "date": "2024-06-15 12:41:53",
+      "banner": "yinlin"
+    },
+    {
+      "name": "Emerald of Genesis",
+      "value": 27,
+      "date": "2024-06-15 12:41:17",
+      "banner": "yinlin"
+    }
+  ]
+}

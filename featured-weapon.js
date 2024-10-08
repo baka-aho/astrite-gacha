@@ -14,7 +14,7 @@ const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
 container.innerHTML = "";
 
 fetch(
-  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/weapon.json"
+  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/featured-weapon.json"
 )
   .then((response) => {
     if (!response.ok) {

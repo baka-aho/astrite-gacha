@@ -7,19 +7,7 @@ const updateCell = (label, newValue, index = 0, cell = 1) => {
   }
 };
 
-var currentPity = 0;
-fetch(chrome.runtime.getURL("./data.json"))
-  .then((response) => {
-    if (!response.ok) {
-    }
-    return response.json();
-  })
-  .then((json) => {
-    console.log(json);
-    currentPity = json["featured-reso-pity"];
-  })
-  .catch((error) => {});
-
+var currentPity = 10;
 let totalPulls = 0;
 
 const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
@@ -27,7 +15,7 @@ const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
 container.innerHTML = "";
 
 fetch(
-  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/resonator.json"
+  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/featured-resonator.json"
 )
   .then((response) => {
     if (!response.ok) {
