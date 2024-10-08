@@ -4,7 +4,7 @@
     "emerald-of-genesis": "/_image?href=%2F_astro%2FT_IconWeapon21020015_UI.CF_FmeUX.png&f=webp"
   },
   "banner": "/_image?href=%2F_astro%2Ftill-the-sea-turns-clear.f3m3gtir.jpg&f=webp",
-  "characters": [
+  "weapons": [
     {
       "name": "Lustrous Razor",
       "value": 34,

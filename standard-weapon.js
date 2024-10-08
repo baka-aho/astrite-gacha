@@ -14,7 +14,7 @@ const container = document.querySelector(".my-2.flex.flex-row.flex-wrap.gap-2");
 container.innerHTML = "";
 
 fetch(
-  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/featured-weapon.json"
+  "https://raw.githubusercontent.com/baka-aho/astrite-gacha/refs/heads/main/standard-weapon.json"
 )
   .then((response) => {
     if (!response.ok) {
@@ -97,7 +97,7 @@ fetch(
       // Create character div
       const weaponDiv = document.createElement("div");
       weaponDiv.className =
-        "flex items-center gap-x-2 rounded-lg px-1 pl-0 text-lg transition-transform hover:scale-110 bg-neutral-100/20";
+        "flex items-center gap-x-2 rounded-lg px-1 pl-0 text-lg transition-transform hover:scale-110 bg-neutral-100/20 bg-r5/45";
 
       // Create image container and image
       const img = document.createElement("img");
@@ -116,16 +116,6 @@ fetch(
 
       const valueSpan = document.createElement("span");
       valueSpan.className = "ml-1 font-bold";
-
-      if (weapon.value > 49) {
-        valueSpan.className += " text-r4";
-      } else {
-        valueSpan.className += " text-success";
-      }
-
-      if (weapon.win) {
-        weaponDiv.className += " bg-r5/45";
-      }
 
       valueSpan.textContent = weapon.value;
 
